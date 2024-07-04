@@ -1,10 +1,11 @@
 <template>
-  <v-app-bar :elevation="2">
+  <v-app-bar :elevation="2" class="pt-3">
     <v-app-bar-title>{{ title }}</v-app-bar-title>
     <v-spacer></v-spacer>
     <v-text-field
       v-model="search"
       label="Search"
+      class="mt-3"
       prepend-inner-icon="fas fa-search"
       rounded
       flat
@@ -41,7 +42,6 @@ const props = defineProps({
 });
 // Properties
 const title = ref(props.title);
-const darkMode = ref(false);
 
 // Methods
 </script>
