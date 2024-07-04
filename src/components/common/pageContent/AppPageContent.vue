@@ -27,6 +27,9 @@
       </v-avatar>
     </div>
   </v-app-bar>
+  <div class="ma-3 pt-4">
+    <slot name="default"></slot>
+  </div>
 </template>
 
 <script setup>

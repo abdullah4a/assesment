@@ -20,3 +20,8 @@ export default {
       <component :is="layout" />
     </v-theme-provider>
 </template>
+<style>
+.v-card{
+  border-radius: 20px !important;
+}
+</style>

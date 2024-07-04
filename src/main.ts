@@ -11,6 +11,10 @@ import NotFoundLayout from './layouts/NotFoundLayout.vue'
 // Components
 import AppSideMenuBar from './components/common/nav/sideMenubar/AppSideMenuBar.vue'
 import AppPageContent from './components/common/pageContent/AppPageContent.vue'
+import BarChartComponent from "./components/charts/BarChartComponent.vue"
+import LineChartComponent from "./components/charts/LineChartComponent.vue"
+import PieChartComponent from "./components/charts/PieChartComponent.vue"
+
 
 const app = createApp(App)
 
@@ -21,6 +25,9 @@ app
   .component("NotFoundLayout", NotFoundLayout)
   .component('app-side-menu-bar', AppSideMenuBar)
   .component('app-page-content', AppPageContent)
+  .component("BarChart", BarChartComponent)
+  .component("LineChart", LineChartComponent)
+  .component("PieChart", PieChartComponent)
 
 
   app.use(router)
