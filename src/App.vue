@@ -1,30 +1,22 @@
+<script lang="ts">
+export default {
+  computed: {
+    layout() {
+      console.log(this.$route.meta.layout);
+      return this.$route.meta.layout || 'DefaultLayout';
+    },  getTheme(){
+            return localStorage.getItem('theme');
+        }
+  },
+  created() {
+    // that will set initial theme for app in Local storage
+    localStorage.setItem('theme', "light")
+  },
+};
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <v-theme-provider :theme="getTheme">
+      <component :is="layout" />
+    </v-theme-provider>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>

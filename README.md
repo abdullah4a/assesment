@@ -1,4 +1,4 @@
-# assesment
+# assessment-app
 
 ## Project setup
 ```
